@@ -1,0 +1,54 @@
+// font awesome
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
+//
+
+// bootstrap
+@import "bootstrap-sprockets";
+@import "bootstrap";
+//
+
+// ヘッダー
+header p {
+  color: #fff;
+  font-size: 20px;
+}
+
+//
+
+// booksのtop.html
+.top-text {
+  text-align: center;
+}
+
+.top-text p {
+  display: inline-block;
+  text-align: left;
+  line-height: 30px;
+}
+
+.bookers {
+  font-weight: bold;
+}
+
+a:visited {
+  color: #333;
+}
+
+// registrationsのnew.html
+.signup-btn {
+  margin: 10px 0;
+}
+//
+
+// sessionsのnew.html
+.login-btn {
+  margin: 10px;
+}
+//
+
+// usersのshow.html
+h2 {
+  margin: 20px 0 10px 10px;
+}
+//

@@ -1,0 +1,39 @@
+<!--Welcome! You have signed up successfully.-->
+<!--上のメッセージは無事ログインに成功したよ！というメッセージ-->
+<% if flash[:notice] %>
+  <%= flash[:notice] %>
+<% end %>
+<div class="container">
+  <div class="col-xs-3">
+    <h2>User info</h2>
+    <%= attachment_image_tag @user, :profile_image, :fill, 100, 100, fallback: "no_image.jpg" %>
+     <table class="table">
+        <tr>
+          <th>name</th>
+          <td><%= @user.name %></td>
+        </tr>
+        <tr>
+          <th>introduction</th>
+          <td><%= @user.introduction %></td>
+        </tr>
+      </table>
+          <%= link_to edit_user_path(@user.id), class: 'btn btn-default col-xs-12' do %>
+          <span class="glyphicon glyphicon-wrench btn" aria-hidden="true"></span>
+          <% end %>
+    <%= form_with model:@book, local:true do |f| %>
+        <h2 class="newbook-btn">New book</h2>
+        <div class="form-group">
+          <label>Title</label>
+          <%= f.text_field :title, class: 'col-xs-12'%>
+        </div>
+        <div class="form-group" style="margin-bottom: 60px;">
+          <label>Opinion</label>
+          <%= f.text_area :body, class: 'col-xs-12'%>
+        </div>
+
+        <div class="create-btn">
+          <%= f.submit "Create Book", class: 'btn col-xs-12 btn-primary' %>
+        </div>
+    <% end %>
+  </div>
+</div>
