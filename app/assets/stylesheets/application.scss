@@ -8,6 +8,18 @@
 @import "bootstrap";
 //
 
+// フラッシュメッセージ
+.flash-ms {
+  font-size: 20px;
+}
+//
+
+// エラーメッセージ
+.failure,.error-ms {
+  color: red;
+}
+//
+
 // ヘッダー
 header p {
   color: #fff;
@@ -29,10 +41,6 @@ header p {
 
 .bookers {
   font-weight: bold;
-}
-
-a:visited {
-  color: #333;
 }
 
 // registrationsのnew.html
