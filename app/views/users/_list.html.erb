@@ -21,11 +21,9 @@
           <td><%= user.introduction %></td>
         </tr>
       </table>
-          <% if current_user.id == user.id %>
             <%= link_to edit_user_path(user.id), class: 'btn btn-default col-xs-12' do %>
             <span class="glyphicon glyphicon-wrench btn" aria-hidden="true"></span>
             <% end %>
-          <% end %>
     <%= form_with model:book, local:true do |f| %>
         <h2 class="newbook-btn">New book</h2>
         <div class="form-group">
