@@ -3,6 +3,12 @@
 @import 'font-awesome';
 //
 
+// font awesomeのliタグの点を消す
+li {
+  list-style: none;
+}
+//
+
 // bootstrap
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -43,6 +49,12 @@ header p {
   font-weight: bold;
 }
 
+// booksのshow.html(コメントフォーム)
+.comment {
+  height: 100px;
+}
+//
+
 // registrationsのnew.html
 .signup-btn {
   margin: 10px 0;
@@ -60,3 +72,4 @@ h2 {
   margin: 20px 0 10px 10px;
 }
 //
+

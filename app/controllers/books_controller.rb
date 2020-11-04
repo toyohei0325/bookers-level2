@@ -29,6 +29,8 @@ class BooksController < ApplicationController
     # ここで定義してある@userと@bookは部分テンプレートのインスタンス変数である。
     # @user = @book.userになるのはこの投稿をしたユーザーをUser infoのところに表示させたいからである。
     # @book_new = Book.newになるのはshowアクションでは@bookが既に定義されてあるのでかぶるのを防ぐためである。
+    @book_comment = BookComment.new
+    @book_comments = BookComment.all
   end
 
   def index
