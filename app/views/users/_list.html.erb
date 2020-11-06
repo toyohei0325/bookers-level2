@@ -20,6 +20,14 @@
           <th>introduction</th>
           <td><%= user.introduction %></td>
         </tr>
+        <tr>
+          <th>follows</th>
+          <td><%= link_to user.followings.count, follows_user_path(user.id) %></td>
+        </tr>
+        <tr>
+          <th>followers</th>
+          <td><%= link_to user.followers.count, followers_user_path(user.id) %></td>
+        </tr>
       </table>
             <%= link_to edit_user_path(user.id), class: 'btn btn-default col-xs-12' do %>
             <span class="glyphicon glyphicon-wrench btn" aria-hidden="true"></span>
