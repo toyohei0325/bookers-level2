@@ -1,13 +1,17 @@
 class RelationshipsController < ApplicationController
   def create
-    follow = current_user.active_relationships.build(follower_id: params[:user_id])
-    follow.save
+    user = User.find(params[:user_id])
+    following = Relationship.new(following_id: current_user.id, follower_id: user.id)
+    following.save
     redirect_back(fallback_location: root_path)
   end
 
   def destroy
-    follow = current_user.active_relationships.find_by(follower_id: params[:user_id])
-    follow.destroy
+    user = User.find(params[:user_id])
+    follower = Relationship.find_by(following_id: current_user.id, follower_id: user.id)
+    follower.destroy
     redirect_back(fallback_location: root_path)
   end
 end
+
+# Relationship.where(followings_id: user )とuser.followingsは同じ意味

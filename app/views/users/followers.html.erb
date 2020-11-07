@@ -1,7 +1,7 @@
   <div class="container">
     <div class="row">
       <h2>Follower Users</h2>
-      <div class="table">
+      <table class="table">
         <thead>
           <tr>
             <th>image</th>
@@ -10,7 +10,7 @@
           </tr>
         </thead>
         <tbody>
-          <% if @users.each do |user| %>
+          <% @users.each do |user| %>
             <tr>
               <td><%= attachment_image_tag user, :profile_image, :fill, 40, 40, fallback: "no_image.jpg" %></td>
               <td><%= user.name %></td>
@@ -20,6 +20,7 @@
             </tr>
           <% end %>
         </tbody>
+        </table>
       </div>
     </div>
   </div>
